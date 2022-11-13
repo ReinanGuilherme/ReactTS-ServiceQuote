@@ -9,8 +9,7 @@ Visitar: https://service-quote-react-ts.vercel.app/
 *  Styled-Components
 *  API - ServiceQuote, Documentação: https://documenter.getpostman.com/view/20949578/2s8YeixwTs
 
-## 🎁 Expressões de gratidão
-
+---
 * Conte a outras pessoas sobre este projeto 📢;
 
 ---
