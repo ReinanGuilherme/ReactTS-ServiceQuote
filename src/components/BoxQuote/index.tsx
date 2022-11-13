@@ -55,7 +55,8 @@ export function BoxQuote(props: propsBoxQuote){
                     place="top"
                     type="dark"
                     effect="solid"
-                    event="click">
+                    event="click"
+                    eventOff="mouseleave mouseout scroll mousewheel blur">
                     <p>Copiado</p>
                 </ReactTooltip>
             </div>
