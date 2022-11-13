@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    width: 400px;
+    width: 500px;
     margin: 20px auto;
 
     background-color: rgba(255,255,255,0.8);
@@ -44,7 +44,7 @@ export const Container = styled.div`
     }
 
     .Text {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 10px;
     }
 
@@ -55,5 +55,9 @@ export const Container = styled.div`
 
     @media (max-width: 500px) {
         width: 300px;
+
+        .Text {
+            font-size: 14px;
+        }
     }
 `
