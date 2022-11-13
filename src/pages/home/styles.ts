@@ -23,7 +23,3 @@ export const Container = styled.div`
     }
 
 `
-
-export const ContainerQuotes = styled.div`
-
-`

@@ -44,9 +44,10 @@ export function BoxQuote(props: propsBoxQuote){
             <div className="containerBtn">
                 <button className="btnTranslate" onClick={ChangeLanguage}><BsTranslate className="iconTranslate"/>{changeBtnText}</button>
                 <button 
-                    onClick={CopyText} 
+                    onMouseDown={() => CopyText()} 
                     className="btnCopy"
-                    data-tip data-for="btnCopy">
+                    data-tip data-for="btnCopy"
+                    >
                     <MdContentCopy/>
                 </button>                
                 <ReactTooltip 
