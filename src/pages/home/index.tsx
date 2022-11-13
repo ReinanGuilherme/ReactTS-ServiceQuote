@@ -58,13 +58,15 @@ export function Home() {
     return (
         <Container>
             <h1>Citações</h1>
-            {quotes.map((item, index) => {
-                return (
-                    <BoxQuote key={index} text_enUS={item.text_enUS} text_ptBR={item.text_ptBR} author={item.author}/>
-                )
-            })}
 
-            <ButtonViewMore onClick={() => GetPageQuotes(AddNumberPage(75))}>Ver Mais</ButtonViewMore>
+            {quotes.map((item, index) => {
+                    return (
+                        <BoxQuote key={index} text_enUS={item.text_enUS} text_ptBR={item.text_ptBR} author={item.author}/>
+                    )
+                })}   
+
+            <ButtonViewMore onClick={() => GetPageQuotes(AddNumberPage(75))}>Ver Mais</ButtonViewMore>           
+
         </Container>
     )
 }

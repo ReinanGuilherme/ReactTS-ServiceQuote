@@ -7,6 +7,8 @@ import { Container } from "./styles";
 import {MdContentCopy} from "react-icons/md"
 import {BsTranslate} from "react-icons/bs"
 
+import ReactTooltip from "react-tooltip";
+
 export function BoxQuote(props: propsBoxQuote){
 
     //ref para manipular os elementos text da boxQuote
@@ -21,7 +23,7 @@ export function BoxQuote(props: propsBoxQuote){
             navigator.clipboard.writeText(props.text_ptBR as string)
         } else {            
             navigator.clipboard.writeText(props.text_enUS as string)
-        }    
+        }   
     }
 
     function ChangeLanguage(){
@@ -41,7 +43,20 @@ export function BoxQuote(props: propsBoxQuote){
         <Container>
             <div className="containerBtn">
                 <button className="btnTranslate" onClick={ChangeLanguage}><BsTranslate className="iconTranslate"/>{changeBtnText}</button>
-                <button onClick={CopyText} className="btnCopy"><MdContentCopy/></button>
+                <button 
+                    onClick={CopyText} 
+                    className="btnCopy"
+                    data-tip data-for="btnCopy">
+                    <MdContentCopy/>
+                </button>                
+                <ReactTooltip 
+                    id="btnCopy"
+                    place="top"
+                    type="dark"
+                    effect="solid"
+                    event="click">
+                    <p>Copiado</p>
+                </ReactTooltip>
             </div>
             <p id="textEnUS" className="Text" ref={refEnUS} translate="no">{props.text_enUS}</p>
             <p id="textPtBR" className="Text" ref={refPtBR} translate="no">{props.text_ptBR}</p>
